@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+
+body {
+    font-family: 'Lexend Deca', sans-serif;
+}
+
+iframe {
+    width: 100%;
+    height: 100vh;
+    border: none;
+    /* Iframe is an inline element, so sometimes it leaves blank whitespaces at the bottom.
+    either `vertical-align: bottom` or `display: block` can be used to fix the issue of iframe leaving empty whitespace below it */
+    vertical-align: bottom;
+}
+
+#loader, #error {
+    font-size: 1.4rem;
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: white;
+}
+
+#loader {
+    z-index: 1;
+}
+
+.spinner {
+    animation: rotate 2s linear infinite;
+    z-index: 2;
+}
+
+.spinner .path {
+    stroke: #003688;
+    stroke-linecap: round;
+    animation: dash 1.5s ease-in-out infinite;
+}
+
+.full-screen-spinner {
+    width: 3.5rem;
+    height: 3.5rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -25px 0 0 -25px;
+}
+
+@keyframes rotate {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes dash {
+    0% {
+        stroke-dasharray: 1, 150;
+        stroke-dashoffset: 0;
+    }
+
+    50% {
+        stroke-dasharray: 90, 150;
+        stroke-dashoffset: -35;
+    }
+
+    100% {
+        stroke-dasharray: 90, 150;
+        stroke-dashoffset: -124;
+    }
+}
+
+#loader img {
+    filter: none;
+}
+
+#error {
+    z-index: 2;
+}
+
+#error:not([hidden="hidden"]), #loader:not([hidden="hidden"]) {
+    display: flex;
+}
