@@ -132,7 +132,7 @@ function sanitize(htmlStr) {
             setTimeout(() => {
                 // hide loader
                 loader.setAttribute("hidden", "hidden");
-            }, 1000)
+            }, 700)
         }
     });
 
