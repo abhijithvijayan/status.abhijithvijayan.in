@@ -1,5 +1,5 @@
 const STATUS_PAGE_URL = "https://stats.uptimerobot.com/pzxzYf90DR/788159955";
-const SERVER_URL = "https://zl4buk.deta.dev/api/v1/html";
+const SERVER_URL = "https://site-fetcher.deta.dev/api/v1/html";
 
 const events = {
     INIT: "init"
