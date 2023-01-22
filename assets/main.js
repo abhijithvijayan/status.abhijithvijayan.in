@@ -34,8 +34,10 @@ function request(url, params, cb) {
 const scriptToInject = `
     <script>
         const lastUpdated = document.getElementsByClassName('last-updated')[0];
-        // hide last updated datetime item
-        lastUpdated.parentElement && lastUpdated.parentElement.style.setProperty("visibility", "hidden");
+        if (lastUpdated) {
+            // hide last updated datetime item
+            lastUpdated.parentElement && lastUpdated.parentElement.style.setProperty("visibility", "hidden");    
+        }
 
         // listen to an event from the parent wrapper with event payload
         window.addEventListener('message', function(event) {
