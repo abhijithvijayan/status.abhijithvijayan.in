@@ -96,7 +96,7 @@ function sanitize(htmlStr) {
     const sanitized = htmlStr.replace("function countdown() {", `
         const countdown = () => {};
         function __countdown__() {
-    `).replace('src="/', `src="${STATUS_PAGE_URL}/`);
+    `);
 
     return injectScriptIntoSrcDoc(sanitized);
 }
