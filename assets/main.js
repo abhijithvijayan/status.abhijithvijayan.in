@@ -1,8 +1,8 @@
-// const STATUS_PAGE_URL = "https://stats.uptimerobot.com/pzxzYf90DR/788159955";
-const STATUS_PAGE_URL = "https://abhijithvijayan.instatus.com";
+const STATUS_PAGE_URL = "https://stats.uptimerobot.com/pzxzYf90DR/788159955";
+// const STATUS_PAGE_URL = "https://abhijithvijayan.instatus.com";
 const SERVER_URL = "https://site-fetcher.deta.dev/api/v1/html";
-// const CACHE_TTL = 5 * 60 * 1000; // stats are re-fetched every 5 mins, so retrieve from cache with a TTL of 5mins
-const CACHE_TTL = 24 * 60 * 60 * 1000; // 24 HOURS
+const CACHE_TTL = 5 * 60 * 1000; // stats are re-fetched every 5 mins, so retrieve from cache with a TTL of 5mins
+// const CACHE_TTL = 24 * 60 * 60 * 1000; // 24 HOURS
 
 const events = {
     INIT: "init"

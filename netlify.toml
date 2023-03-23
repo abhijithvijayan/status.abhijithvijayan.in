@@ -1,9 +1,0 @@
-[[redirects]]
-    from = "/_next/*"
-    to = "https://abhijithvijayan.instatus.com/_next/:splat"
-    status = 200
-
-[[headers]]
-    for = "/*"
-    [headers.values]
-        Access-Control-Allow-Origin = "*"
